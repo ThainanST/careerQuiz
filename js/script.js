@@ -84,14 +84,6 @@ function showQuestion() {
   document.getElementById("questionText").innerText = q.text;
   const form = document.getElementById("optionsForm");
   form.innerHTML = "";
-  // Object.entries(q.options).forEach(([key, value]) => {
-  //   const id = `option-${key}`;
-  //   form.innerHTML += `
-  //     <label><input type="radio" name="option" value="${key}" onchange="highlightOption(this)"><span>${value}</span></label>
-  //   `;
-  // });
-  // updateDots();
-  // Embaralhar as opções
   const shuffledOptions = Object.entries(q.options).sort(() => Math.random() - 0.5);
 
   shuffledOptions.forEach(([key, value]) => {
