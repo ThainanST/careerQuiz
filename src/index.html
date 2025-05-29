@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teste de Afinidade - Engenharia Elétrica</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="intro" class="screen active">
+    <h1>Descubra sua afinidade na Engenharia Elétrica</h1>
+    <img src="assets/img/gear.svg" alt="Ícone de Engenharia" class="icon" />
+      <p>Você se interessa por:</p>
+      <p>Eletrônica, Controle, Potência ou Telecomunicações?</p>
+      <h2>Responda às perguntas e descubra!</h2>
+      <button onclick="startTest()">Iniciar</button>
+    </div>
+
+    <div id="question" class="screen">
+      <p class="progress">Pergunta <span id="questionNumber">1</span> de 5</p>
+      <h2 id="questionText"></h2>
+      <form id="optionsForm"></form>
+      <div class="navigation">
+        <button onclick="prevQuestion()">Voltar</button>
+        <button onclick="nextQuestion()">Próxima</button>
+      </div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <div id="result" class="screen">
+      <h2>Seu perfil</h2>
+      <img id="resultIcon" class="icon" alt="Ícone do resultado" />
+      <h3 id="resultTitle"></h3>
+      <p id="resultDescription"></p>
+      <button onclick="restartTest()">Refazer</button>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
